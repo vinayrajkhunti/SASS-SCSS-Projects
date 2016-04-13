@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Searchbox</title>
+	<link rel="stylesheet" type="text/css" href="css/search.scss">
+	<script type="text/javascript" src="javascript/search.js"></script>
+</head>
+<body>
+	<div class="navdiv">
+		
+		<!--HORIZONTAL NAVBAR-->
+		<nav class="mynav">
+		<img src="http://imgh.us/logo_240.svg" id="logo" style="float: left;">
+  			<ul>
+    			<li><a href="#">NEW</a></li>
+    			<li><a href="#">EXPLORE</a></li>
+    			<li><a href="#">SELL</a></li>
+    			<li style="margin-left: 400px;"><a href="">Login</a></li>
+    			<button id="btn1">Sign Up</button>
+  			</ul>
+		</nav>
+	</div>
+	<!--ANOTHER DIV WITH SEARCH BOX-->
+	<div class="searchdiv">
+		<h1 style="margin-top: 200px; margin-left: 200px;">Find VHS Tapes</h1><br>
+		<div class="search">
+				
+				<ul class="mynav" style="display: inline-block;">
+				<input type="text" id="txt" placeholder="Title or director...">
+				</input>
+					<li style="background-color: white;height: 70px;margin-top: 1px; padding-top:0px;"><a href="#" style="background-color: transparent; color: #333333;">All genres <img src="images/down arrow.png" id="img3" style="visibility: visible;"><img src="http://imgh.us/chevron-large.svg" id="img2" style="visibility: hidden;"></a>
 
+						<ul id="submenu" onmouseover="vinay()" onmouseleave="vinay1()">
+        					<li><a href="#">All genres</a></li>
+        					<li><a href="#">Action</a></li>
+        					<li><a href="#">Adventure</a></li>
+        					<li><a href="#">Animation</a></li>
+        					<li><a href="#">Biography</a></li>
+        					<li><a href="#">Comedy</a></li>
+        					<li><a href="#">Film Noir</a></li>
+        					<li><a href="#">History</a></li>
+        					<li><a href="#">Sci-Fi</a></li>
+        					<li><a href="#">Western</a></li>
+        					<li><a href="#">Thriller</a></li>
+        					<li><a href="#">Romance</a></li>
+      					</ul>
+					</li>
+					<input type="submit" value="search" class="sbutton">
+      				</ul>
+		</div>
+		<a href="" style="color: #FF9830; margin-top: 10px; margin-left: 870px; font-size: 14px;text-decoration: none;">Advanced Search</a><img src="images/side arrow.png" style="margin-left: 5px;margin-top: 3px;">
+	</div>
+</body>
+</html>

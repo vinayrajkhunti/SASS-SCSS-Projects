@@ -1,1 +1,158 @@
+//colors
+$color_ship_gray_approx: #3f3745;
+$color_blackcurrant_approx: #352d3b;
+$gray: gray;
+$white: #ffffff;
+$color_neon_carrot_approx: #ff9830;
+$color_scarpa_flow_approx: #5f5665;
+$allports: #0076a3;
+$color_mercury_approx: #e7e7e7;
+$color_mine_shaft_approx: #333333;
 
+//fonts
+$font_0: Lucida Sans Unicode;
+$font_1: Lucida Grande;
+$font_2: sans-serif;
+$font_3: Arial;
+$font_4: Helvetica;
+
+//@extend-elements
+//original selectors
+//.mynav ul, .mynav li, .mynav img
+%extend_1 {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	margin-top: 20px;
+}
+
+
+body {
+	background-color: $color_ship_gray_approx;
+	font-family: $font_0, $font_1, $font_2;
+}
+.navdiv {
+	background-color: $color_blackcurrant_approx;
+	height: 100px;
+	width: 100%;
+	margin: 0;
+}
+.mynav {
+	margin-left: 160px;
+	ul {
+		@extend %extend_1;
+		background: $gray;
+		list-style: none;
+		width: 100%;
+	}
+	li {
+		@extend %extend_1;
+		float: left;
+		position: relative;
+		width: auto;
+		&:hover {
+			a {
+				background: $color_neon_carrot_approx;
+			}
+			ul {
+				overflow: auto;
+				max-height: 150px;
+			}
+		}
+	}
+	img {
+		@extend %extend_1;
+	}
+	a {
+		background: $color_blackcurrant_approx;
+		color: $white;
+		display: block;
+		font: bold 12px/20px $font_2;
+		padding: 10px 25px;
+		text-align: center;
+		text-decoration: none;
+		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+		transition: all .25s ease;
+	}
+}
+#btn1 {
+	background-color: $color_scarpa_flow_approx;
+	color: $white;
+	margin-top: 20px;
+	border: transparent;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 10px;
+	padding: 5px 15px;
+	font-family: $font_3, $font_4, $font_2;
+	font-size: 15px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	height: 40px;
+}
+.searchdiv {
+	color: $white;
+}
+#txt {
+	margin: 0;
+	padding: 5px 15px;
+	font-family: $font_3, $font_4, $font_2;
+	font-size: 14px;
+	border: 1px solid $allports;
+	border-right: 0;
+	//Instead of the line below you could use @include border-top-left-radius($radius)
+	border-top-left-radius: 5px 5px;
+	//Instead of the line below you could use @include border-bottom-left-radius($radius)
+	border-bottom-left-radius: 5px 5px;
+	height: 60px;
+	width: 480px;
+	float: left;
+}
+#submenu {
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	visibility: hidden;
+	li {
+		float: none;
+		width: 100%;
+	}
+	a {
+		background-color: $color_mercury_approx;
+		color: $color_mine_shaft_approx;
+		&:hover {
+			background: $color_neon_carrot_approx;
+		}
+	}
+}
+.sbutton {
+	margin-top: 1px;
+	padding: 5px 15px;
+	font-family: $font_3, $font_4, $font_2;
+	font-size: 14px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	color: $white;
+	border: solid 1px $color_neon_carrot_approx;
+	border-right: 0;
+	background: $color_neon_carrot_approx;
+	//Instead of the line below you could use @include border-top-right-radius($radius)
+	border-top-right-radius: 5px 5px;
+	//Instead of the line below you could use @include border-bottom-right-radius($radius)
+	border-bottom-right-radius: 5px 5px;
+	height: 70px;
+	width: 140px;
+}
+li:hover ul {
+	opacity: 1;
+	top: 40px;
+	visibility: visible;
+	&#submenu {
+		opacity: 1;
+		top: 40px;
+		visibility: visible;
+	}
+}
